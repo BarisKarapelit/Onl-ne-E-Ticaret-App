@@ -23,5 +23,23 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             form1.Show();
             this.Hide();
         }
+
+        private void iller_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'friendyolDataSet.Iller' table. You can move, or remove it, as needed.
+            this.illerTableAdapter.Fill(this.friendyolDataSet.Iller);
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex > -1)
+            {
+                txtil.Text = listBox1.Text;
+                label2.Text = listBox1.SelectedValue.ToString();
+                label3.Text = listBox1.SelectedIndex.ToString();
+            }
+
+        }
     }
 }

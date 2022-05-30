@@ -33,17 +33,20 @@ namespace OnlineTicaretUygulamasi
         private void ürünlerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AnaMenü.Urunler urunler = new AnaMenü.Urunler();
+            urunler.MdiParent = this;
             urunler.Show();
-            this.Hide();
+           // this.Hide();
 
 
         }
 
         private void illerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AnaMenü.iller iller = new AnaMenü.iller();
+            // AnaMenü.iller iller = new AnaMenü.iller();
+            illerelle iller = new illerelle();
+            iller.MdiParent = this;
             iller.Show();
-            this.Hide();
+         //   this.Hide();
 
         }
 
