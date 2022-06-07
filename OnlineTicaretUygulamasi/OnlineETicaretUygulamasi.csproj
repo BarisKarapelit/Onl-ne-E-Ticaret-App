@@ -104,12 +104,19 @@
     <Compile Include="AnaMenü\Satisler.Designer.cs">
       <DependentUpon>Satisler.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnaMenü\Tedarikci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaMenü\Tedarikci.Designer.cs">
+      <DependentUpon>Tedarikci.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnaMenü\Urunler.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AnaMenü\Urunler.Designer.cs">
       <DependentUpon>Urunler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Context\yardimci.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +178,12 @@
     <Compile Include="Stok Hareketleri\Uretim.Designer.cs">
       <DependentUpon>Uretim.cs</DependentUpon>
     </Compile>
+    <Compile Include="TemizlemeKontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemizlemeKontrol.Designer.cs">
+      <DependentUpon>TemizlemeKontrol.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AnaMenü\Depo.resx">
       <DependentUpon>Depo.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AnaMenü\Satisler.resx">
       <DependentUpon>Satisler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaMenü\Tedarikci.resx">
+      <DependentUpon>Tedarikci.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AnaMenü\Urunler.resx">
       <DependentUpon>Urunler.cs</DependentUpon>
@@ -231,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stok Hareketleri\Uretim.resx">
       <DependentUpon>Uretim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemizlemeKontrol.resx">
+      <DependentUpon>TemizlemeKontrol.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="FriendyolDataSet.xsc">
       <DependentUpon>FriendyolDataSet.xsd</DependentUpon>
@@ -297,5 +316,6 @@
     <Content Include="images\safe-deposit.ico" />
     <Content Include="images\warehouse.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

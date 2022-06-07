@@ -42,8 +42,8 @@ namespace OnlineTicaretUygulamasi
 
         private void illerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // AnaMenü.iller iller = new AnaMenü.iller();
-            illerelle iller = new illerelle();
+            AnaMenü.iller iller = new AnaMenü.iller();
+          //  illerelle iller = new illerelle();
             iller.MdiParent = this;
             iller.Show();
          //   this.Hide();
@@ -62,6 +62,7 @@ namespace OnlineTicaretUygulamasi
         private void kategoriToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AnaMenü.Kategori kategori =new  AnaMenü.Kategori();
+         
             kategori.Show();
             this.Hide();
             
@@ -70,8 +71,9 @@ namespace OnlineTicaretUygulamasi
         private void kargoFirmalarıToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AnaMenü.KargoFirmalari kargoFirmalari = new AnaMenü.KargoFirmalari();
+            kargoFirmalari.MdiParent = this;
             kargoFirmalari.Show();
-            this.Hide();
+           // this.Hide();
         }
 
         private void depoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,8 +95,9 @@ namespace OnlineTicaretUygulamasi
         private void satışSiparişToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Satis.SatisSiparis satisSiparis = new Satis.SatisSiparis();
+            satisSiparis.MdiParent = this;
             satisSiparis.Show();
-            this.Hide();
+            
 
 
         }
@@ -146,6 +149,21 @@ namespace OnlineTicaretUygulamasi
             kasa.Show();
             this.Hide();
 
+        }
+
+        private void tedarikçiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AnaMenü.Tedarikci tedarikci = new AnaMenü.Tedarikci();
+            tedarikci.MdiParent = this;
+            tedarikci.Show();
+         //   this.Hide();
+        }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TemizlemeKontrol tem = new TemizlemeKontrol();
+            tem.MdiParent = this;
+            tem.Show();
         }
     }
 }
