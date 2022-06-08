@@ -71,7 +71,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1600, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(1600, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,7 +80,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(72, 40);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(72, 36);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // backToolStripMenuItem
@@ -104,7 +104,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             // 
             this.textBox1.Location = new System.Drawing.Point(30, 72);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(273, 20);
+            this.textBox1.Size = new System.Drawing.Size(273, 31);
             this.textBox1.TabIndex = 2;
             // 
             // pictureBox1
@@ -120,7 +120,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(30, 577);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(70, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
@@ -139,7 +139,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(101, 472);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Urun Adi";
             // 
@@ -147,14 +147,14 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             // 
             this.txtUrunAdi.Location = new System.Drawing.Point(198, 466);
             this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(373, 20);
+            this.txtUrunAdi.Size = new System.Drawing.Size(373, 31);
             this.txtUrunAdi.TabIndex = 7;
             // 
             // txtMaliyet
             // 
             this.txtMaliyet.Location = new System.Drawing.Point(198, 398);
             this.txtMaliyet.Name = "txtMaliyet";
-            this.txtMaliyet.Size = new System.Drawing.Size(373, 20);
+            this.txtMaliyet.Size = new System.Drawing.Size(373, 31);
             this.txtMaliyet.TabIndex = 9;
             // 
             // Maliyet
@@ -162,7 +162,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.Maliyet.AutoSize = true;
             this.Maliyet.Location = new System.Drawing.Point(101, 404);
             this.Maliyet.Name = "Maliyet";
-            this.Maliyet.Size = new System.Drawing.Size(43, 13);
+            this.Maliyet.Size = new System.Drawing.Size(87, 25);
             this.Maliyet.TabIndex = 8;
             this.Maliyet.Text = "Maliyet ";
             // 
@@ -170,7 +170,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             // 
             this.txtYorum.Location = new System.Drawing.Point(198, 332);
             this.txtYorum.Name = "txtYorum";
-            this.txtYorum.Size = new System.Drawing.Size(373, 20);
+            this.txtYorum.Size = new System.Drawing.Size(373, 31);
             this.txtYorum.TabIndex = 11;
             // 
             // label4
@@ -178,7 +178,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(101, 338);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 10;
             this.label4.Text = "Yorum";
             // 
@@ -187,7 +187,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.txtStokMiktari.Enabled = false;
             this.txtStokMiktari.Location = new System.Drawing.Point(198, 247);
             this.txtStokMiktari.Name = "txtStokMiktari";
-            this.txtStokMiktari.Size = new System.Drawing.Size(373, 20);
+            this.txtStokMiktari.Size = new System.Drawing.Size(373, 31);
             this.txtStokMiktari.TabIndex = 13;
             this.txtStokMiktari.Text = "12";
             // 
@@ -196,7 +196,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.lblStok.AutoSize = true;
             this.lblStok.Location = new System.Drawing.Point(34, 253);
             this.lblStok.Name = "lblStok";
-            this.lblStok.Size = new System.Drawing.Size(70, 13);
+            this.lblStok.Size = new System.Drawing.Size(137, 25);
             this.lblStok.TabIndex = 12;
             this.lblStok.Text = "Stok MIktari :";
             // 
@@ -204,7 +204,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             // 
             this.txtOzellikler.Location = new System.Drawing.Point(198, 180);
             this.txtOzellikler.Name = "txtOzellikler";
-            this.txtOzellikler.Size = new System.Drawing.Size(373, 20);
+            this.txtOzellikler.Size = new System.Drawing.Size(373, 31);
             this.txtOzellikler.TabIndex = 15;
             // 
             // label6
@@ -212,7 +212,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(58, 186);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.Size = new System.Drawing.Size(113, 25);
             this.label6.TabIndex = 14;
             this.label6.Text = "Ozellikler :";
             // 
@@ -220,7 +220,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             // 
             this.txtFiyat.Location = new System.Drawing.Point(198, 99);
             this.txtFiyat.Name = "txtFiyat";
-            this.txtFiyat.Size = new System.Drawing.Size(373, 20);
+            this.txtFiyat.Size = new System.Drawing.Size(373, 31);
             this.txtFiyat.TabIndex = 17;
             // 
             // lblFiyat
@@ -228,7 +228,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.lblFiyat.AutoSize = true;
             this.lblFiyat.Location = new System.Drawing.Point(100, 102);
             this.lblFiyat.Name = "lblFiyat";
-            this.lblFiyat.Size = new System.Drawing.Size(35, 13);
+            this.lblFiyat.Size = new System.Drawing.Size(71, 25);
             this.lblFiyat.TabIndex = 16;
             this.lblFiyat.Text = "Fiyat :";
             // 
@@ -237,7 +237,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             this.lblKategori.AutoSize = true;
             this.lblKategori.Location = new System.Drawing.Point(77, 35);
             this.lblKategori.Name = "lblKategori";
-            this.lblKategori.Size = new System.Drawing.Size(52, 13);
+            this.lblKategori.Size = new System.Drawing.Size(104, 25);
             this.lblKategori.TabIndex = 18;
             this.lblKategori.Text = "Kategori :";
             // 

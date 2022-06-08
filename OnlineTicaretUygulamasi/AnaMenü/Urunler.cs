@@ -1,4 +1,5 @@
 ﻿using OnlineTicaretUygulamasi.Context;
+using OnlineTicaretUygulamasi.ServerConnected;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,20 +11,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace OnlineTicaretUygulamasi.AnaMenü
 {
     public partial class Urunler : Form
     {
-        public string ServerAdress = "11.11.13.8";
-        public string UserName = "sa305";
-        public string Password = "sa305";
-        public string DataBaseName = "Friendyol";
+
+        private static Server server = new Server();
         public SqlConnection Kopru = new SqlConnection();
         OpenFileDialog open = new OpenFileDialog();
 
 
         public Urunler()
         {
+
             InitializeComponent();
         }
 
@@ -41,7 +42,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             string fn = "";
             string fl = "";
             // open file dialog   
-           
+
             // image filters  
             open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp *tif *png )|*.jpg; *.jpeg; *.gif; *.bmp; *.tif; *.png ";
             // open.Filter = " PDF (*.pdf )| *.pdf)";
@@ -57,6 +58,7 @@ namespace OnlineTicaretUygulamasi.AnaMenü
                 int dosya = fn.Length;
                 fl = textBox1.Text.Substring(0, toplam - dosya);
                 textBox1.Text = fl;
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
 
@@ -79,17 +81,17 @@ namespace OnlineTicaretUygulamasi.AnaMenü
             // Create a new target folder.
             // If the directory
             System.IO.Directory.CreateDirectory(targetPath);
-            System.IO.File.Copy(sourceFile, destFile,true);
+            System.IO.File.Copy(sourceFile, destFile, true);
 
-            
+
         }
 
         private void DbSave()
         {
 
-            string filePath =open.FileName.ToString();
-            string SSorgu= "INSERT INTO [dbo].[Urunler]"+
-          " ([Kategori_ID]"+
+            string filePath = open.FileName.ToString();
+            string SSorgu = "INSERT INTO [dbo].[Urunler]" +
+          " ([Kategori_ID]" +
           " ,[Fiyat]" +
           "  ,[Ozellikler]" +
           "  ,[StokMiktari]" +
@@ -98,27 +100,27 @@ namespace OnlineTicaretUygulamasi.AnaMenü
           "  ,[Urun_Maliyeti]" +
           " ,[UrunAdi])" +
          " VALUES" +
-          "('" +cmbKategori.SelectedValue+"','"
-          + txtFiyat.Text+"','"
-          + txtOzellikler.Text+"','"
-          + txtStokMiktari.Text+"','"
-          +txtYorum.Text+"','"
-          +filePath+"','"
-          +txtMaliyet.Text+"','"
-          +txtUrunAdi.Text
+          "('" + cmbKategori.SelectedValue + "','"
+          + txtFiyat.Text + "','"
+          + txtOzellikler.Text + "','"
+          + txtStokMiktari.Text + "','"
+          + txtYorum.Text + "','"
+          + filePath + "','"
+          + txtMaliyet.Text + "','"
+          + txtUrunAdi.Text
           + "')";
-            SSorgu+="";
-            string mesaj = yardimci.Kaydet_Guncelle_Sil(SSorgu, ServerAdress, UserName, Password, DataBaseName);
+            SSorgu += "";
+            string mesaj = yardimci.Kaydet_Guncelle_Sil(SSorgu, server.ServerAdress, server.UserName, server.Password, server.DataBaseName);
             MessageBox.Show(mesaj);
         }
 
         private void Urunler_Load(object sender, EventArgs e)
         {
             string kSorgu = " SELECT Kategori_ID, Kategori_Name FROM Kategori";
-            Kopru = yardimci.Baglan(ServerAdress, UserName, Password, DataBaseName);
+            Kopru = yardimci.Baglan(server.ServerAdress, server.UserName, server.Password, server.DataBaseName);
             DataTable data = new DataTable();
-            data= yardimci.VerileriOku(Kopru, kSorgu);
-            if (data.Rows.Count>0)
+            data = yardimci.VerileriOku(Kopru, kSorgu);
+            if (data.Rows.Count > 0)
             {
                 DataRow row = data.NewRow();
                 row["Kategori_Name"] = "Lütfen Seçiniz ..";

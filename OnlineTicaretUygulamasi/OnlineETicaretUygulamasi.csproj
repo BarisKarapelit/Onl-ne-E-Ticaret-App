@@ -160,6 +160,7 @@
     <Compile Include="Satis\Teslimat.Designer.cs">
       <DependentUpon>Teslimat.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServerConnected\Server.cs" />
     <Compile Include="Stok Hareketleri\SatinAlma.cs">
       <SubType>Form</SubType>
     </Compile>
