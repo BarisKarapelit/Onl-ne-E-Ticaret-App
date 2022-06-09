@@ -130,6 +130,32 @@ namespace OnlineTicaretUygulamasi.AnaMenü
                 cmbKategori.ValueMember = "Kategori_ID";
                 cmbKategori.SelectedItem = 0;
             }
+
+
+            //Datagridview'e veri ekleme
+
+            UrunListeleme();
+        }
+
+        private void UrunListeleme()
+        {
+            string uSorgu = "SELECT " +
+          " [Kategori_ID]" +
+          " ,[Fiyat]" +
+          "  ,[Ozellikler]" +
+          "  ,[StokMiktari]" +
+          "  ,[Yorumlar]" +
+          "  ,[Resimler]" +
+          "  ,[Urun_Maliyeti]" +
+          " ,[UrunAdi]" + "FROM Urunler";
+            DataTable dataTable = new DataTable();
+            dataTable = yardimci.VerileriOku(Kopru, uSorgu);
+
+            if (dataTable.Rows.Count > 0)
+            {
+                dtUrunler.DataSource = dataTable;
+
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)

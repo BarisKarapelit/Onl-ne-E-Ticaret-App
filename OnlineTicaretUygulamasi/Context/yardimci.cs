@@ -46,44 +46,44 @@ namespace OnlineTicaretUygulamasi.Context
 
         }
 
-        public static void silici (KargoFirmalari Frm)
+        public static void silici(KargoFirmalari Frm)
         {
-           
 
-                foreach (Control Ctrl in Frm.Controls)
-                {
+
+            foreach (Control Ctrl in Frm.Controls)
+            {
                 //Console.WriteLine(Ctrl.GetType().ToString());
                 //MessageBox.Show ( (Ctrl.GetType().ToString())) ;
-                
-                    switch (Ctrl.GetType().ToString())
 
-                    {
-                        case "System.Windows.Forms.CheckBox":
-                            ((CheckBox)Ctrl).Checked = false;
-                  
-                            break;
+                switch (Ctrl.GetType().ToString())
 
-                        case "System.Windows.Forms.TextBox":
-                            ((TextBox)Ctrl).Text = "";
-                            break;
+                {
+                    case "System.Windows.Forms.CheckBox":
+                        ((CheckBox)Ctrl).Checked = false;
 
-                        case "System.Windows.Forms.RichTextBox":
-                            ((RichTextBox)Ctrl).Text = "";
-                            break;
+                        break;
 
-                        case "System.Windows.Forms.ComboBox":
-                            ((ComboBox)Ctrl).SelectedIndex = -1;
-                            ((ComboBox)Ctrl).SelectedIndex = -1;
-                            break;
+                    case "System.Windows.Forms.TextBox":
+                        ((TextBox)Ctrl).Text = "";
+                        break;
 
-                        case "System.Windows.Forms.MaskedTextBox":
+                    case "System.Windows.Forms.RichTextBox":
+                        ((RichTextBox)Ctrl).Text = "";
+                        break;
 
-                            ((MaskedTextBox)Ctrl).Text = "";
-                            break;
+                    case "System.Windows.Forms.ComboBox":
+                        ((ComboBox)Ctrl).SelectedIndex = -1;
+                        ((ComboBox)Ctrl).SelectedIndex = -1;
+                        break;
+
+                    case "System.Windows.Forms.MaskedTextBox":
+
+                        ((MaskedTextBox)Ctrl).Text = "";
+                        break;
                     case "System.Windows.Forms.Panel":
-                        
+
                         Panel bb = new Panel();
-                        bb.Name  = Ctrl.Name.ToString();
+                        bb.Name = Ctrl.Name.ToString();
 
                         foreach (Control Ctrl2 in bb.Controls)
                         {
@@ -113,18 +113,18 @@ namespace OnlineTicaretUygulamasi.Context
 
                                     ((MaskedTextBox)Ctrl).Text = "";
                                     break;
-                            
+
                             }
                         }
-                            
+
 
                         break;
-                    }
-                
-
                 }
-             
-        } 
+
+
+            }
+
+        }
 
         public static DataTable VerileriOku(SqlConnection kopru, string sorgu)
         {
@@ -136,19 +136,19 @@ namespace OnlineTicaretUygulamasi.Context
             SqlDataAdapter Adapter = new SqlDataAdapter(SqlKomut);
             Adapter.Fill(ilTablosu);
             try
-            { 
+            {
                 if (kopru.State == ConnectionState.Closed)
                 {
                     kopru.Open();
                     SqlKomut.ExecuteNonQuery();
                     kopru.Close();
-                } 
+                }
             }
             catch (Exception err)
-            { 
+            {
             }
             return ilTablosu;
         }
     }
 }
- 
+
